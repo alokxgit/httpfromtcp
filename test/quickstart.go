@@ -1,17 +1,17 @@
 package main
 
-import "github.com/alokxcode/httpfromtcp"
+import "github.com/alokxgit/httpfromtcp"
 
 func main() {
-    server := httpfromtcp.NewServer()
+	server := httpfromtcp.NewServer()
 
-    server.Handle("GET /", func(req *httpfromtcp.Req, rw *httpfromtcp.ResponseWriter) {
-        rw.WriteHeader(httpfromtcp.StatusOk)
-        rw.Header().Set("Content-Type", "text/plain")
-		rw.Header().Set("Connection","keep-alive")
+	server.Handle("GET /", func(req *httpfromtcp.Req, rw *httpfromtcp.ResponseWriter) {
+		rw.WriteHeader(httpfromtcp.StatusOk)
+		rw.Header().Set("Content-Type", "text/plain")
+		rw.Header().Set("Connection", "Keep-alive")
 
-        rw.Write("Hello, world!")
-    })
+		rw.Write("Hello, world!")
+	})
 
-    server.ListenAndServe(":8080")
+	server.ListenAndServe(":8080")
 }
