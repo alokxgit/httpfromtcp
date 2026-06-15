@@ -1,4 +1,4 @@
-An HTTP server library built from scratch in Go on top of raw TCP — no `net/http` under the hood. This system parses raw byte streams from TCP sockets, matches routes with dynamic path parameters, and formats and writes HTTP-compliant responses back to the client.
+An HTTP server library built from scratch in Go on top of raw TCP, no `net/http` under the hood. This system parses raw byte streams from TCP sockets, matches routes with dynamic path parameters, and formats and writes HTTP-compliant responses back to the client.
 
 ## Table of Contents
 - [Architecture](#architecture)
